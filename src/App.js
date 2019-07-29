@@ -3,6 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const elements = ['one', 'two', 'three'];
+
+  const items = []
+
+  for (const [index, value] of elements.entries()) {
+    items.push(<li key={index}>{value}</li>)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +26,9 @@ function App() {
         >
           Learn React
         </a>
+        <div>
+          {items}
+        </div>
       </header>
     </div>
   );
